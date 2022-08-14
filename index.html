@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>B u b b l e s</h1>
+    </div>
+</body>
+<script>
+    var container = document.querySelector('.container');
+    var body = document.querySelector('body');
+
+    
+    for (let i = 1; i <= 100; i++) {
+        var circle = document.createElement('div');
+        var circleWidth = Math.random() * 250;
+        var circleHeight = circleWidth;
+        var circleX = Math.random() * (window.innerWidth - circleWidth - 30);
+        var delay = Math.random() * -20;
+        var duration = Math.random() * 10;
+
+        circle.style.width = circleWidth+'px';
+        circle.style.height = circleHeight+'px';
+        circle.style.borderRadius = "50%";
+        circle.style.position = "absolute";
+        // circle.style.border = " 10px solid red";
+        circle.style.left = circleX+'px';
+        circle.style.animationDuration = 3 +duration+'s';
+        circle.style.animationDelay = delay+'s';
+
+
+        container.appendChild(circle)
+    }
+</script>
+</html>
